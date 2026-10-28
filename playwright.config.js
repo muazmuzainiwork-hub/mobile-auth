@@ -1,0 +1,2 @@
+const { defineConfig } = require('@playwright/test');
+module.exports = defineConfig({ testDir: './tests', testMatch: '*.e2e.js', workers: 1, use: { baseURL: 'http://127.0.0.1:8081', viewport: {width:390,height:844}, launchOptions: { executablePath: process.env.CHROMIUM_PATH || (require('fs').existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined), args: ['--no-sandbox'] } }, webServer: { command: 'EXPO_OFFLINE=1 npm run web -- --port 8081', url:'http://127.0.0.1:8081', reuseExistingServer: true, timeout:120000 } });
