@@ -8,7 +8,7 @@ Requires Node.js 22.13+ (Node 24 was used here) and npm.
 
 ```sh
 npm ci
-npm start
+npm start OR npx expo start
 ```
 
 Open with an Expo Go version compatible with SDK 58, or use a compatible development build. Press `a` for an installed Android emulator or `i` for an iOS simulator (macOS and Xcode required). A physical phone must be able to reach the Metro server; a remote cloud workspace may require supported port forwarding or running the checkout locally.
